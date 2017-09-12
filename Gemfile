@@ -47,3 +47,5 @@ end
 
 gem 'devise'
 gem "awesome_print", require:"ap"
+gem 'rails_12factor', group: :production
+ruby "2.2.1"
