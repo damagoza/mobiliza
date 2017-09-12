@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+
+  namespace :api do
+    post 'vechicle/create'
+    post 'vechicle/show'
+    get 'vechicle/all'
+  end
+
+  namespace :api do
+    post 'type_vehicle/create'    
+    post 'type_vehicle/show'
+    get 'type_vehicle/all'
+  end
+
+  namespace :api do
+    get  'user/all'
+    post 'user/sign_in'
+    post 'user/sign_up'
+    post 'user/show'
+    get  'user/all'    
+  end
+
   resources :vechicles
   resources :vechicles
   resources :vechicles
@@ -60,4 +81,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+  end
