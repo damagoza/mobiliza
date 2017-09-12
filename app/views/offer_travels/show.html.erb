@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @offer_travel.user %>
+</p>
+
+<p>
+  <strong>Vechicle:</strong>
+  <%= @offer_travel.vechicle %>
+</p>
+
+<p>
+  <strong>Coordenada start:</strong>
+  <%= @offer_travel.coordenada_start %>
+</p>
+
+<p>
+  <strong>Coordenada end:</strong>
+  <%= @offer_travel.coordenada_end %>
+</p>
+
+<p>
+  <strong>Name start:</strong>
+  <%= @offer_travel.name_start %>
+</p>
+
+<p>
+  <strong>Name end:</strong>
+  <%= @offer_travel.name_end %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @offer_travel.state %>
+</p>
+
+<%= link_to 'Edit', edit_offer_travel_path(@offer_travel) %> |
+<%= link_to 'Back', offer_travels_path %>

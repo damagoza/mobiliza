@@ -11,10 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912021247) do
+ActiveRecord::Schema.define(version: 20170912181157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "demand_travels", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "offer_travel_id"
+    t.boolean  "accept"
+    t.boolean  "state"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "demand_travels", ["offer_travel_id"], name: "index_demand_travels_on_offer_travel_id", using: :btree
+  add_index "demand_travels", ["user_id"], name: "index_demand_travels_on_user_id", using: :btree
+
+  create_table "offer_travels", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "vechicle_id"
+    t.float    "coordenada_start"
+    t.float    "coordenada_end"
+    t.string   "name_start"
+    t.string   "name_end"
+    t.boolean  "state"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "offer_travels", ["user_id"], name: "index_offer_travels_on_user_id", using: :btree
+  add_index "offer_travels", ["vechicle_id"], name: "index_offer_travels_on_vechicle_id", using: :btree
 
   create_table "type_vehicles", force: :cascade do |t|
     t.string   "name"
@@ -52,6 +79,10 @@ ActiveRecord::Schema.define(version: 20170912021247) do
   add_index "vechicles", ["type_vehicle_id"], name: "index_vechicles_on_type_vehicle_id", using: :btree
   add_index "vechicles", ["user_id"], name: "index_vechicles_on_user_id", using: :btree
 
+  add_foreign_key "demand_travels", "offer_travels"
+  add_foreign_key "demand_travels", "users"
+  add_foreign_key "offer_travels", "users"
+  add_foreign_key "offer_travels", "vechicles"
   add_foreign_key "vechicles", "type_vehicles"
   add_foreign_key "vechicles", "users"
 end

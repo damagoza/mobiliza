@@ -5,7 +5,7 @@ module Api
 
 		def create
 			respuesta = {'typeVehicle': nil}
-			type_vehicle = TypeVechicle.new(:name => params[:name])
+			type_vehicle = TypeVehicle.new(:name => params[:name])
 			if type_vehicle.save
 				respuesta = {'typeVehicle': type_vehicle}
 			end			

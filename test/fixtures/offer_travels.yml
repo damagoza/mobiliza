@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  vechicle_id: 
+  coordenada_start: 1.5
+  coordenada_end: 1.5
+  name_start: MyString
+  name_end: MyString
+  state: false
+
+two:
+  user_id: 
+  vechicle_id: 
+  coordenada_start: 1.5
+  coordenada_end: 1.5
+  name_start: MyString
+  name_end: MyString
+  state: false

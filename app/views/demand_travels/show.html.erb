@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @demand_travel.user %>
+</p>
+
+<p>
+  <strong>Offer travel:</strong>
+  <%= @demand_travel.offer_travel %>
+</p>
+
+<p>
+  <strong>Accept:</strong>
+  <%= @demand_travel.accept %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @demand_travel.state %>
+</p>
+
+<%= link_to 'Edit', edit_demand_travel_path(@demand_travel) %> |
+<%= link_to 'Back', demand_travels_path %>

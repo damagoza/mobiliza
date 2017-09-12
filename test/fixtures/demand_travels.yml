@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  offer_travel_id: 
+  accept: false
+  state: false
+
+two:
+  user_id: 
+  offer_travel_id: 
+  accept: false
+  state: false
