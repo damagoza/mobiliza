@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer travel:</strong>
+  <%= @travel.offer_travel %>
+</p>
+
+<p>
+  <strong>Demand travel:</strong>
+  <%= @travel.demand_travel %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @travel.state %>
+</p>
+
+<p>
+  <strong>Calification offer:</strong>
+  <%= @travel.calification_offer %>
+</p>
+
+<p>
+  <strong>Calification demand:</strong>
+  <%= @travel.calification_demand %>
+</p>
+
+<%= link_to 'Edit', edit_travel_path(@travel) %> |
+<%= link_to 'Back', travels_path %>

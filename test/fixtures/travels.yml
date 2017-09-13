@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_travel_id: 
+  demand_travel_id: 
+  state: false
+  calification_offer: 1
+  calification_demand: 1
+
+two:
+  offer_travel_id: 
+  demand_travel_id: 
+  state: false
+  calification_offer: 1
+  calification_demand: 1

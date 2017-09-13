@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :travels
   resources :demand_travels
   resources :offer_travels
+
+  namespace :api do
+    post 'travel/create'
+    post 'travel/show'
+    get  'travel/all'
+  end  
 
   namespace :api do
     post 'demand_travel/create'
