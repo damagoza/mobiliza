@@ -4,12 +4,12 @@ module Api
 		respond_to :json	
 
 		def show
-		user = User.find(params[:id])
-		render json: user
+			user = User.find(params[:id])
+			render json: user
 		end	  
 
 		def all
-		render json: User.all
+			render json: User.all
 		end
 
 		def default_serializer_options

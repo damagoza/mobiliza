@@ -18,12 +18,14 @@ Rails.application.routes.draw do
 
 
   namespace :api do
+    post 'offer_travel/travel_for_state'    
     post 'offer_travel/create'
     post 'offer_travel/show'
     get  'offer_travel/all'
   end  
   
   namespace :api do
+    post 'vechicle/vechicle_for_user'
     post 'vechicle/create'
     post 'vechicle/show'
     get 'vechicle/all'

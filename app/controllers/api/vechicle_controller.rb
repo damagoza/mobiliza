@@ -1,7 +1,12 @@
 module Api
 	class VechicleController < ApplicationController
 		skip_before_filter :verify_authenticity_token
-		respond_to :json	
+		respond_to :json
+
+		def vechicle_for_user
+			vehicles = Vechicle.where(:user_id => params[:id])
+			render json: vehicles
+		end	
 
 		def create
 			respuesta = {'vechicle': nil}

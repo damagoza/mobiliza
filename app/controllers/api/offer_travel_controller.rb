@@ -1,7 +1,12 @@
 module Api
 	class OfferTravelController < ApplicationController
 		skip_before_filter :verify_authenticity_token
-		respond_to :json	
+		respond_to :json
+
+		def travel_for_state
+			travels = OfferTravel.where(:state => params[:state])
+			render json: travels
+		end
 
 		def create
 			respuesta = {'offerTravel': nil}
