@@ -36,15 +36,15 @@ Rails.application.routes.draw do
   namespace :api do
     post 'type_vehicle/create'    
     post 'type_vehicle/show'
-    get 'type_vehicle/all'
+    get 'type_vehicle/all' #obtiene todos los usuarios
   end
 
   namespace :api do
     get  'user/all'
-    post 'user/sign_in'
-    post 'user/sign_up'
-    post 'user/show'
-    get  'user/all'    
+    post 'user/sign_in' # hace el login del usuario en la plataforma, recibe como parametros email y la clave.
+    post 'user/sign_up' # hace el registro de un usuario, recibe como parametros email y la clave.
+    post 'user/show' #obtiene un usuario. recibe como parametros el id
+    get  'user/all' #obtiene todos los usuarios    
   end
 
   resources :vechicles

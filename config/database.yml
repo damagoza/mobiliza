@@ -3,17 +3,17 @@ default: &default
   encoding: utf8  
   pool: 5
 
-#development:
-#  <<: *default
-#  database: Mobiliza_development
-  
 development:
  <<: *default
- database: dfqj7581bke5qg
- pool: 5
- username: vxaawzoojodmsi
- password: 9776c7ad3b0994c1e3711d1e1e2b8da7bea586405b3a76755b0e2c3b06a5c0cf
- host: ec2-54-163-249-237.compute-1.amazonaws.com
+ database: Mobiliza_development
+  
+# development:
+#  <<: *default
+#  database: dfqj7581bke5qg
+#  pool: 5
+#  username: vxaawzoojodmsi
+#  password: 9776c7ad3b0994c1e3711d1e1e2b8da7bea586405b3a76755b0e2c3b06a5c0cf
+#  host: ec2-54-163-249-237.compute-1.amazonaws.com
   
 
   # The specified database role being used to connect to postgres.

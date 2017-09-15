@@ -51,4 +51,7 @@ gem 'rails_12factor', group: :production
 gem 'rack-cors', :require => 'rack/cors'
 gem 'active_model_serializers', '~> 0.10.0'
 gem "responders"
+group :development, :test do
+    gem 'railroady'
+end
 ruby "2.2.1"
