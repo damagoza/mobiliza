@@ -3,6 +3,11 @@ module Api
 		skip_before_filter :verify_authenticity_token
 		respond_to :json	
 
+		def for_user
+			demand_travels = DemandTravel.where(:user_id => params[:user_id])
+			render json: demand_travels, include: 'offer_travel.vechicle'
+		end		
+
 		def create
 			respuesta = {'demandTravel': nil}
 			demand_travel = DemandTravel.new(:user_id => params[:user_id], :offer_travel_id => params[:offer_travel_id], :accept => params[:accept], :state => params[:state])

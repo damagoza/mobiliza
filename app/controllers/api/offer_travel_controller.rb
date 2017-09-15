@@ -3,6 +3,11 @@ module Api
 		skip_before_filter :verify_authenticity_token
 		respond_to :json
 
+		def for_user
+			offer_travels = OfferTravel.where(:user_id => params[:user_id])
+			render json: offer_travels
+		end
+
 		def travel_for_state
 			travels = OfferTravel.where(:state => params[:state])
 			render json: travels

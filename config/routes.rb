@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end  
 
   namespace :api do
+    post 'demand_travel/for_user'        
     post 'demand_travel/create'
     post 'demand_travel/show'
     get  'demand_travel/all'
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
 
 
   namespace :api do
+    post 'offer_travel/for_user'        
     post 'offer_travel/travel_for_state'    
     post 'offer_travel/create'
     post 'offer_travel/show'
